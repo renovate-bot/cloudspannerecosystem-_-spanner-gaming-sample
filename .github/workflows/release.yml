@@ -56,7 +56,7 @@ jobs:
           go-version: '^1.19.2'
       - name: Set binary name
         run: |
-          BINARY_NAME=spanner-gaming-sample-${{github.ref_name}}.tar.gz
+          BINARY_NAME=spanner-gaming-sample-${GITHUB_REF_NAME}.tar.gz
           echo "BINARY_NAME=$BINARY_NAME" >> $GITHUB_ENV
       - name: Build
         run: |
